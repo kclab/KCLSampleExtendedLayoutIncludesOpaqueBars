@@ -22,13 +22,17 @@
     self.tabBarController = [[UITabBarController alloc] init];
     
     // TabBarが半透明だとTabBarの領域までTableViewの領域が入る。
-    //self.tabBarController.tabBar.alpha = 0.5;
-    //self.tabBarController.tabBar.translucent = YES;
-    //self.tabBarController.tabBar.backgroundColor = [UIColor greenColor];
+    // /*
+    self.tabBarController.tabBar.alpha = 0.5;
+    self.tabBarController.tabBar.translucent = YES;
+    self.tabBarController.tabBar.backgroundColor = [UIColor greenColor];
+    // */
     
-    // TabBarが不透明だとTabBarの領域までTableViewの領域が入る。
+    // TabBarが不透明だとTableViewの領域はTabBarと被らない。
+    /*
     self.tabBarController.tabBar.alpha = 1.0;
     self.tabBarController.tabBar.translucent = NO;
+     */
     
     UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
     UITableViewController *tableViewController = [storyBoard instantiateViewControllerWithIdentifier:@"kTableViewController"];
