@@ -21,6 +21,7 @@
 		B7DF60EE190F622300441B2F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7DF60D0190F622200441B2F /* UIKit.framework */; };
 		B7DF60F6190F622300441B2F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B7DF60F4190F622300441B2F /* InfoPlist.strings */; };
 		B7DF60F8190F622300441B2F /* KCLSampleExtendedLayoutIncludesOpaqueBarsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B7DF60F7190F622300441B2F /* KCLSampleExtendedLayoutIncludesOpaqueBarsTests.m */; };
+		B7DF6103190F634700441B2F /* KCLTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7DF6102190F634700441B2F /* KCLTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		B7DF60F3190F622300441B2F /* KCLSampleExtendedLayoutIncludesOpaqueBarsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KCLSampleExtendedLayoutIncludesOpaqueBarsTests-Info.plist"; sourceTree = "<group>"; };
 		B7DF60F5190F622300441B2F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B7DF60F7190F622300441B2F /* KCLSampleExtendedLayoutIncludesOpaqueBarsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KCLSampleExtendedLayoutIncludesOpaqueBarsTests.m; sourceTree = "<group>"; };
+		B7DF6101190F634700441B2F /* KCLTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCLTableViewController.h; sourceTree = "<group>"; };
+		B7DF6102190F634700441B2F /* KCLTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCLTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +120,8 @@
 				B7DF60DE190F622200441B2F /* Main.storyboard */,
 				B7DF60E1190F622200441B2F /* KCLViewController.h */,
 				B7DF60E2190F622200441B2F /* KCLViewController.m */,
+				B7DF6101190F634700441B2F /* KCLTableViewController.h */,
+				B7DF6102190F634700441B2F /* KCLTableViewController.m */,
 				B7DF60E4190F622200441B2F /* Images.xcassets */,
 				B7DF60D3190F622200441B2F /* Supporting Files */,
 			);
@@ -250,6 +255,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7DF6103190F634700441B2F /* KCLTableViewController.m in Sources */,
 				B7DF60D9190F622200441B2F /* main.m in Sources */,
 				B7DF60E3190F622200441B2F /* KCLViewController.m in Sources */,
 				B7DF60DD190F622200441B2F /* KCLAppDelegate.m in Sources */,

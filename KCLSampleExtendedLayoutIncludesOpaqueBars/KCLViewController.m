@@ -7,9 +7,10 @@
 //
 
 #import "KCLViewController.h"
+#import "KCLTableViewController.h"
 
-@interface KCLViewController ()
-
+@interface KCLViewController () <UITableViewDataSource>
+@property (nonatomic, strong) UITabBarController *tabBarController;
 @end
 
 @implementation KCLViewController
@@ -17,13 +18,42 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    
+    self.tabBarController = [[UITabBarController alloc] init];
+    
+    // TabBarが半透明だとTabBarの領域までTableViewの領域が入る。
+    //self.tabBarController.tabBar.alpha = 0.5;
+    //self.tabBarController.tabBar.translucent = YES;
+    //self.tabBarController.tabBar.backgroundColor = [UIColor greenColor];
+    
+    // TabBarが不透明だとTabBarの領域までTableViewの領域が入る。
+    self.tabBarController.tabBar.alpha = 1.0;
+    self.tabBarController.tabBar.translucent = NO;
+    
+    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    UITableViewController *tableViewController = [storyBoard instantiateViewControllerWithIdentifier:@"kTableViewController"];
+    tableViewController.tableView.dataSource = self;
+    tableViewController.extendedLayoutIncludesOpaqueBars = NO; // YES => TabBarが不透明でもTableViewの領域をTabBarの領域に潜らせる。
+    
+    [self.tabBarController setViewControllers:@[tableViewController]];
+    [self.view addSubview:self.tabBarController.view];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - <UITableViewDataSource>
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 0;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return nil;
 }
 
 @end
